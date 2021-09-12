@@ -1,0 +1,18 @@
+name: Build and Deploy Microblog
+
+on:
+  issues:
+    types: [opened, edited, reopened, closed, deleted, labeled, unlabeled]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build Microblog
+        uses: herschel666/microblog-action@beta
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          url: 'https://test.pns.link/'

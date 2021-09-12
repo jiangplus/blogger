@@ -15,7 +15,7 @@ jobs:
         uses: herschel666/microblog-action@beta
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          url: 'https://test.pns.link/'
+          url: 'https://test-microblog.netlify.app/'
 
       - name: Deploy Microblog
         uses: nwtgck/actions-netlify@v1.1
